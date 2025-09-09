@@ -121,11 +121,16 @@ span {
     width: 45%;
 }
 
-.home-content h1, .sobre-content h1 {
+.home-content h1 {
     font-weight: 700;
     line-height: 1.6rem;
 
 }
+
+.sobre-content h1 {
+  line-height: 2.5rem !important;
+}
+
 
 .home-content h3, .sobre-content h3{
     font-weight: 700;
