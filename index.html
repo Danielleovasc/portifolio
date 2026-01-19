@@ -237,28 +237,32 @@
     <!-- contato -->
     <section class="contato" id="contato">
         <h2>Contate <span>Me!</span></h2>
-
+    
         <form id="whatsapp-form">
             <div class="input-box">
                 <input type="text" id="name" placeholder="Nome Completo" required>
             </div>
+    
             <div class="input-box">
-                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
             </div>
+    
             <div class="input-box">
-                <input type="text" id="subject" placeholder="Assunto" required>
-            </div>
-            <div class="input-box">
-                <select id="subject" required style="width: 100%; padding: 1.5rem; background: var(--bg-color); color: var(--text-color); border-radius: .8rem; margin: .7rem 0;">
-                    <option value="" disabled selected>Selecione o serviço</option>
+                <select id="subject" required style="width: 100%; padding: 1.5rem; background: #1f242d; color: #fff; border-radius: .8rem; margin: .7rem 0; border: 2px solid var(--main-color);">
+                    <option value="" disabled selected>O que você precisa?</option>
                     <option value="Criação de Dashboard no Power BI">📊 Dashboard Power BI</option>
-                    <option value="Automação com Python">🐍 Automação com Python</option>
-                    <option value="Consultoria de Banco de Dados">🗄️ Consultoria de Banco de Dados</option>
-                    <option value="Outros Assuntos">🙋‍♂️ Outros Assuntos</option>
+                    <option value="Automação de Processos com Python">🐍 Automação com Python</option>
+                    <option value="Análise de Banco de Dados">🗄️ Consultoria de Dados</option>
+                    <option value="Outros Serviços">🙋‍♂️ Outro Assunto</option>
                 </select>
             </div>
-            <textarea id="message" cols="30" rows="8" placeholder="Mensagem" required></textarea>
-
+    
+            <div class="input-box">
+                <input type="tel" id="phone" placeholder="Telefone" maxlength="15" required>
+            </div>
+    
+            <textarea id="message" cols="30" rows="8" placeholder="Descreva brevemente o que você precisa..." required></textarea>
+    
             <button type="submit" class="btn">Enviar para o WhatsApp</button>
         </form>
     </section>
@@ -290,4 +294,5 @@
 <script src="JS/script.js"></script>
 
 </html>
+
 
