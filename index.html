@@ -240,20 +240,18 @@
     
         <form id="whatsapp-form">
             <div class="input-box">
-                <input type="text" id="name" placeholder="Nome Completo" required>
+                <input type="text" id="name" placeholder="Nome" required>
             </div>
     
-            <div class="input-box">
-                <select id="subject" required style="width: 100%; padding: 1.5rem; background: #1f242d; color: #fff; border-radius: .8rem; margin: .7rem 0; border: 2px solid var(--main-color);">
-                    <option value="" disabled selected>O que você precisa?</option>
-                    <option value="Criação de Dashboard no Power BI">📊 Dashboard Power BI</option>
-                    <option value="Automação de Processos com Python">🐍 Automação com Python</option>
-                    <option value="Análise de Banco de Dados">🗄️ Consultoria de Dados</option>
-                    <option value="Outros Serviços">🙋‍♂️ Outro Assunto</option>
-                </select>
-            </div>
+            <select id="subject" required>
+                <option value="" disabled selected>O que você precisa?</option>
+                <option value="Criação de Dashboard no Power BI">📊 Dashboard Power BI</option>
+                <option value="Automação com Python">🐍 Automação com Python</option>
+                <option value="Consultoria de Banco de Dados">🗄️ Consultoria de Dados</option>
+                <option value="Outros Assuntos">🙋‍♂️ Outro Assunto</option>
+            </select>
     
-            <textarea id="message" cols="30" rows="8" placeholder="Descreva brevemente o que você precisa..." required></textarea>
+            <textarea id="message" cols="30" rows="8" placeholder="Descreva sobre o que você precisa..." required></textarea>
     
             <button type="submit" class="btn">Enviar para o WhatsApp</button>
         </form>
@@ -286,6 +284,7 @@
 <script src="JS/script.js"></script>
 
 </html>
+
 
 
 
