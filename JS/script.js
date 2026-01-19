@@ -73,34 +73,32 @@ window.onclick = function(event) {
     if (event.target == modalDatabase) modalDatabase.style.display = "none";
 };
 
-// --- NOVO CÓDIGO: INTEGRAÇÃO WHATSAPP ---
-
 const whatsappForm = document.getElementById('whatsapp-form');
 
 if (whatsappForm) {
     whatsappForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Pegando os valores pelos IDs (certifique-se que o HTML tem esses IDs)
         const nome = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
         const assunto = document.getElementById('subject').value;
-        const telefone = document.getElementById('phone').value;
-        const mensagem = document.getElementById('message').value;
+        const mensagemCliente = document.getElementById('message').value;
 
-        // --- AJUSTE SEU NÚMERO AQUI ---
+        // --- SEU NÚMERO ---
         const meuNumero = "5592991071385"; 
 
-        const textoMensagem = `*Novo Contato do Portfólio* \n\n` +
-                              `*Nome:* ${nome} \n` +
-                              `*E-mail:* ${email} \n` +
-                              `*Assunto:* ${assunto} \n` +
-                              `*Telefone:* ${telefone} \n` +
-                              `*Mensagem:* ${mensagem}`;
+        // Criando uma saudação dinâmica
+        const saudacao = `Olá, Daniel! Meu nome é *${nome}*.`;
+        
+        // Mensagem estruturada para parecer um chat e não um formulário fixo
+        const textoMensagem = `${saudacao}\n\n` +
+                              `Estou entrando em contato sobre: *${assunto}*\n` +
+                              `"${mensagemCliente}"`;
 
         const textoCodificado = encodeURIComponent(textoMensagem);
         const urlWhatsApp = `https://wa.me/${meuNumero}?text=${textoCodificado}`;
 
         window.open(urlWhatsApp, '_blank');
+        whatsappForm.reset();
     });
 }
+
