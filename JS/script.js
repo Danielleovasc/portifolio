@@ -100,5 +100,43 @@ if (whatsappForm) {
         window.open(urlWhatsApp, '_blank');
         whatsappForm.reset();
     });
+// Adicione isso ao final do seu script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappForm = document.getElementById('whatsapp-form');
+
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o recarregamento da página
+            
+            console.log("Botão clicado!"); // Aparecerá no Inspecionar (F12) se funcionar
+
+            // 1. Coleta os valores
+            const nome = document.getElementById('name').value;
+            const assunto = document.getElementById('subject').value;
+            const mensagemCliente = document.getElementById('message').value;
+
+            // 2. CONFIGURAÇÃO - COLOQUE SEU NÚMERO AQUI
+            // Formato: 55 + DDD + NUMERO (Tudo junto, sem espaços)
+            const meuNumero = "5511999999999"; 
+
+            // 3. Formatação da mensagem (Estilo Chat)
+            const textoMensagem = `Olá Daniel! Me chamo *${nome}*.\n\n` +
+                                  `Gostaria de falar sobre: *${assunto}*.\n\n` +
+                                  `Minha mensagem: _${mensagemCliente}_`;
+
+            // 4. Montagem da URL
+            const urlWhatsApp = `https://wa.me/${meuNumero}?text=${encodeURIComponent(textoMensagem)}`;
+
+            // 5. Redirecionamento
+            window.open(urlWhatsApp, '_blank');
+            
+            // Opcional: limpa os campos
+            whatsappForm.reset();
+        });
+    } else {
+        console.error("Erro: Formulário 'whatsapp-form' não encontrado no HTML.");
+    }
+});
 }
+
 
