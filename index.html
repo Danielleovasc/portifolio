@@ -249,7 +249,13 @@
                 <input type="text" id="subject" placeholder="Assunto" required>
             </div>
             <div class="input-box">
-                <input type="tel" id="phone" placeholder="Telefone" required>
+                <select id="subject" required style="width: 100%; padding: 1.5rem; background: var(--bg-color); color: var(--text-color); border-radius: .8rem; margin: .7rem 0;">
+                    <option value="" disabled selected>Selecione o serviço</option>
+                    <option value="Criação de Dashboard no Power BI">📊 Dashboard Power BI</option>
+                    <option value="Automação com Python">🐍 Automação com Python</option>
+                    <option value="Consultoria de Banco de Dados">🗄️ Consultoria de Banco de Dados</option>
+                    <option value="Outros Assuntos">🙋‍♂️ Outros Assuntos</option>
+                </select>
             </div>
             <textarea id="message" cols="30" rows="8" placeholder="Mensagem" required></textarea>
 
@@ -284,3 +290,4 @@
 <script src="JS/script.js"></script>
 
 </html>
+
