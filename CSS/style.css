@@ -157,8 +157,7 @@ span {
     align-items: center;
     width: 100%;
     max-width: 600px; /* Ajuste conforme necessário */
-    margin: auto;
-
+    margin: auto
 }
 
 .input-box {
@@ -616,5 +615,6 @@ footer {
         background-color: var(--color-05);
     }
 }
+
 
 
