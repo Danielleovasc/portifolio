@@ -237,23 +237,23 @@
     <!-- contato -->
     <section class="contato" id="contato">
         <h2>Contate <span>Me!</span></h2>
-    
-        <form action="send_email.php" method="POST">
+
+        <form id="whatsapp-form">
             <div class="input-box">
-                <input type="text" name="name" placeholder="Nome Completo" required>
+                <input type="text" id="name" placeholder="Nome Completo" required>
             </div>
             <div class="input-box">
-                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="email" id="email" placeholder="E-mail" required>
             </div>
             <div class="input-box">
-                <input type="text" name="subject" placeholder="Assunto" required>
+                <input type="text" id="subject" placeholder="Assunto" required>
             </div>
             <div class="input-box">
-                <input type="tel" name="phone" placeholder="Telefone" required>
+                <input type="tel" id="phone" placeholder="Telefone" required>
             </div>
-            <textarea name="message" cols="30" rows="8" placeholder="Mensagem" required></textarea>
-    
-            <button type="submit" class="btn">Enviar Mensagem</button>
+            <textarea id="message" cols="30" rows="8" placeholder="Mensagem" required></textarea>
+
+            <button type="submit" class="btn">Enviar para o WhatsApp</button>
         </form>
     </section>
     
@@ -282,4 +282,5 @@
     </footer>
 </body>
 <script src="JS/script.js"></script>
+
 </html>
